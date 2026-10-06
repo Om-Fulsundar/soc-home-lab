@@ -1,0 +1,4 @@
+index=* sourcetype=XmlWinEventLog:*Sysmon*
+EventCode=1
+| table _time, Image, CommandLine,
+  ParentImage, User

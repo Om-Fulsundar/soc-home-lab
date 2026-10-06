@@ -1,0 +1,2 @@
+index=* sourcetype=WinEventLog
+| timechart span=1h count

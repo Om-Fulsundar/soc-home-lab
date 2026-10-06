@@ -1,0 +1,4 @@
+index=* sourcetype=XmlWinEventLog:*Sysmon*
+EventCode=3
+| table _time, Image, DestinationIp,
+  DestinationPort, User
