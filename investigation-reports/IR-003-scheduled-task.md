@@ -1,15 +1,22 @@
 INVESTIGATION REPORT
 ====================
+
 Alert ID: IR‑2026‑003
+
 Date: 2026‑10‑03
+
 Analyst: Om Fulsundar
+
 Severity: MEDIUM
-Status: CLOSED — TRUE POSITIVE
+
+Status: CLOSED - TRUE POSITIVE
 
 ALERT DETAILS
 -------------
 Source: Wazuh
+
 Rule: Scheduled_Task_Creation
+
 Event ID: N/A (Sysmon/Windows Task Scheduler)
 
 ATTACK SUMMARY
@@ -23,31 +30,44 @@ potential persistence or stealth execution.
 TIMELINE
 --------
 [22:47] PowerShell command executed as Admin
-[22:48] schtasks.exe invoked — task created
-[22:49] Wazuh alert generated — Scheduled Task/Job
+
+[22:48] schtasks.exe invoked - task created
+
+[22:49] Wazuh alert generated - Scheduled Task/Job
+
 [22:55] Investigation complete
 
 EVIDENCE
 --------
 Agent ID: 001
+
 Agent IP: 192.168.6.1
+
 Agent Name: windows‑host
+
 Executable: C:\Windows\System32\schtasks.exe
+
 Description: Task Scheduler COM API
+
 Hashes: SHA1=BF09E52372CF6663743A6FC58FCDB75D7551CD64
+
 Rule Name: technique_id=T1053, technique_name=Scheduled Task/Job
-Signature: Microsoft Windows — Valid
+
+Signature: Microsoft Windows - Valid
+
 Screenshot: simulations/scheduled‑task/
 
 MITRE ATT&CK
 -----------
 Tactic: Persistence
-Technique: T1053 — Scheduled Task/Job
-Sub‑technique: T1053.005 — Scheduled Task
+
+Technique: T1053 - Scheduled Task/Job
+
+Sub‑technique: T1053.005 - Scheduled Task
 
 VERDICT
 -------
-TRUE POSITIVE — Simulated scheduled task creation
+TRUE POSITIVE - Simulated scheduled task creation
 confirmed by Wazuh agent logs
 
 SOC RESPONSE
