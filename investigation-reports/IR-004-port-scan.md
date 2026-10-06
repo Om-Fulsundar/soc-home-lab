@@ -1,15 +1,22 @@
 INVESTIGATION REPORT
 ====================
+
 Alert ID: IR‑2026‑004
+
 Date: 2026‑10‑05
+
 Analyst: Om Fulsundar
+
 Severity: MEDIUM
-Status: CLOSED — TRUE POSITIVE
+
+Status: CLOSED - TRUE POSITIVE
 
 ALERT DETAILS
 -------------
 Source: Sysmon + Wazuh
+
 Rule: Outbound SMB Anomalous Connections
+
 Event ID: 3
 
 ATTACK SUMMARY
@@ -23,28 +30,38 @@ an internal port‑scan simulation using Nmap
 TIMELINE
 --------
 [11:10] Nmap scan initiated locally  
-[11:10] Sysmon Event ID 3 logged — NetworkConnect  
-[11:11] Wazuh alert generated — Outbound SMB connections  
+
+[11:10] Sysmon Event ID 3 logged - NetworkConnect  
+
+[11:11] Wazuh alert generated - Outbound SMB connections  
+
 [11:20] Investigation complete
 
 EVIDENCE
 --------
 Process Image: C:\Program Files (x86)\Nmap\nmap.exe  
+
 User: GROOT\gr00t  
+
 Protocol: TCP  
+
 Source IP: 127.0.0.1  
+
 Source Port: 965  
+
 Rule Name: Outbound SMB Anomalous Connections  
+
 Screenshot: simulations/port‑scan/
 
 MITRE ATT&CK
 -----------
 Tactic: Discovery  
-Technique: T1046 — Network Service Scanning
+
+Technique: T1046 - Network Service Scanning
 
 VERDICT
 -------
-TRUE POSITIVE — Simulated internal port scan
+TRUE POSITIVE - Simulated internal port scan
 confirmed by Sysmon and Wazuh logs
 
 SOC RESPONSE
